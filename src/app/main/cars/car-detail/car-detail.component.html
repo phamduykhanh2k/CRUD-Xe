@@ -1,0 +1,16 @@
+<div *ngIf="car">
+    <div class="form-update">
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate(car.id)">
+
+            <input type="text" formControlName="id" placeholder="ID">
+            <input type="text" formControlName="name" placeholder="Name">
+            <input type="number" formControlName="price" placeholder="Price">
+            <button type="submit" class="btn warning">Update</button>
+        </form>
+        <button (click)="onDelete(car.id)" class="btn danger">Delete</button>
+
+    </div>
+    <p>{{car.id}}</p>
+    <p>{{car.name}}</p>
+    <p>{{car.price | currency: 'VND'}}</p>
+</div>

@@ -1,0 +1,36 @@
+<div class="operations">
+    <button class="btn success mt-1" (click)="onOpenCreate()" *ngIf="!isOpenCreate">
+        New Car
+    </button>
+    <button class="btn warning mt-1" *ngIf="isOpenCreate" (click)="onOpenCreate()">
+        Close
+    </button>
+</div>
+
+<div class="form-create" *ngIf="isOpenCreate">
+    <form [formGroup]="createForm" (ngSubmit)="onCreate()">
+
+        <input type="text" formControlName="id" placeholder="ID">
+        <input type="text" formControlName="name" placeholder="Name">
+        <input type="number" formControlName="price" placeholder="Price">
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+
+<div class="car-detail">
+    <router-outlet></router-outlet>
+</div>
+
+
+<div class="cars">
+    <div class="card" *ngFor="let item of cars">
+        <a routerLink="/cars/{{item.id}}">
+            <div class="car">
+                <p class="car-id">{{item.id}}</p>
+                <p class="car-name">{{item.name}}</p>
+                <p>{{item.price | currency: 'VND'}}</p>
+            </div>
+        </a>
+    </div>
+</div>

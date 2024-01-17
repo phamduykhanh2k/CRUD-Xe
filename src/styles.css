@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Reset CSS */
+html {
+    font-size: 1.4rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.active {
+    color: blue;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.success {
+    color: #fff;
+    background-color: green;
+}
+
+.warning {
+    color: black;
+    background-color: yellow;
+}
+
+.danger {
+    color: #fff;
+    background-color: red;
+}
+
+.mt-1 {
+    margin: 10px;
+}
+
+/* Header */
+
+header {
+    height: 60px;
+    background-color: #ccc;
+}
+
+header ul li {
+    padding: 0 10px;
+    display: inline;
+    line-height: 60px;
+}
+
+header ul li:hover a {
+    color: blue;
+}
+
+.main {
+    padding: 0 20px;
+}
+
+/* Car */
+
+.cars {
+    margin-top: 40px;
+}
+
+.card {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.card:hover {
+    background-color: bisque;
+}
+
+.car-id {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.car-name {
+    margin: 10px 0;
+}
+
+.car {
+    padding: 10px 20px;
+}
